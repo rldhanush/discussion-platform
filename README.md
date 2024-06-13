@@ -1,3 +1,26 @@
+This project is a web application built with Flask and MongoDB, designed to facilitate social interactions through discussions. Users can sign up, log in, and perform actions such as creating posts with text and images, liking posts, commenting on discussions, and following other users. The application supports searching for users and discussions based on text or hashtags, providing a dynamic and engaging platform for social interactions.
+
+Key Features:
+    User Authentication: Secure user sign-up and login functionality.
+    Discussion Creation: Create posts with text, optional images, and hashtags.
+    Interaction Features: Like posts, comment on discussions, and follow other users.
+    Search Functionality: Search for users and discussions based on text or hashtags.
+    Dynamic UI: Updates in real-time with asynchronous data fetching.
+
+Technologies Used:
+    Backend: Flask, MongoDB, Flask-PyMongo for database interactions.
+    Frontend: HTML, CSS, JavaScript for dynamic and responsive user interfaces.
+    File Uploads: Flask's secure file handling for image uploads.
+    Session Management: Flask sessions for user authentication and state management.
+
+Setup Instructions:
+    Clone the repository from [GitHub URL].
+    Install dependencies from requirements.txt.
+    Configure MongoDB URI in the Flask application (app.py).
+    Run the Flask application (python app.py) and navigate to http://localhost:5000.
+
+
+------------------------------------
 Components and Responsibilities:
 
 Application Layer (Flask App):
