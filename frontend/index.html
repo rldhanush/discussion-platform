@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to print form data
+        function submitForm() {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const pwd = document.getElementById('password').value;
+
+            // Construct form data object
+            const formData = {
+                name: name,
+                email: email,
+                mobile: mobile,
+                password: pwd
+            };
+            console.log(formData)
+            // Send form data to Flask server
+            fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        // Handle error response
+                        response.json().then(data => {
+                            // Display error message
+                            document.getElementById('errorMessage').textContent = data.error;
+                        });
+                    } else {
+                        // Reset error message if no error
+                        document.getElementById('errorMessage').textContent = '';
+
+                        // Redirect to login page upon successful signup
+                        window.location.href = '/login.html';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                        
+        }  
+    </script>
+</head>
+<body>
+    <div id="app">
+        <h1>Signup</h1>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mobile">Mobile No:</label>
+            <input type="text" id="mobile" name="mobile" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="button" onclick="submitForm()">Signup</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a> using your email ID.</p>
+    </div>
+    <p id="errorMessage" style="color: red;"></p>
+</body>
+</html>

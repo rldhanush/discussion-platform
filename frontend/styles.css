@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#errorMessage {
+    color: red;
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.2rem; /* Adjust font size */
+    margin-top: 10px; /* Add some space above the error message */
+}

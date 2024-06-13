@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#welcomeMessage {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.dashboard {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.user-management {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.user-management .search-container {
+    margin-bottom: 10px;
+}
+
+.user-management input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.user-management button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.user-management button:hover {
+    background-color: #0056b3;
+}
+
+.discussions {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.discussions form {
+    margin-bottom: 20px;
+}
+
+.discussions form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.discussions form textarea,
+.discussions form input[type="text"],
+.discussions form input[type="file"] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.discussions form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.discussions form button[type="button"] {
+    background-color: #28a745;
+}
+
+.discussions form button:hover {
+    background-color: #0056b3;
+}
+
+.discussions form #response {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.discussions form #response.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.discussions form #response.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.discussions button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.discussions button[type="button"] {
+    background-color: #28a745;
+    margin-right: 10px;
+}
+
+.discussions button:hover {
+    background-color: #0056b3;
+}
+
+
+/* CSS for discussion posts */
+.discussion {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.discussion p {
+    margin: 5px 0;
+}
+
+.discussion img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.discussion button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.discussion button:hover {
+    background-color: #45a049;
+}
+
+/* CSS for comments list */
+.comments-list {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comments-list .comment {
+    margin-bottom: 8px;
+    padding: 8px;
+    border-left: 3px solid #4CAF50;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comments-list .comment strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.like-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+    background-color: #0056b3;
+}

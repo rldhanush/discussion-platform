@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboardStyle.css">
+</head>
+<body>
+    <div id="app">
+        <h1 id="welcomeMessage">Welcome, [User Name]</h1>
+    </div>
+    <div class="dashboard">
+        <div class="section user-management">
+            <h2>User Management</h2>
+            <div class="search-container">
+                <input type="text" id="searchUser" placeholder="Search user...">
+                <button onclick="searchUser()">Search</button>
+            </div>
+            <div id="userSearchResult"></div>
+            
+        </div>
+        <div class="section discussions">
+            <h2>Discussions</h2>
+            <form id="discussionForm" enctype="multipart/form-data">
+                <label for="text">Discussion Text:</label>
+                <textarea id="text" name="text" required></textarea><br>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image"><br>
+                <label for="hashtags">Hash Tags (comma separated):</label>
+                <input type="text" id="hashtags" name="hashtags" required><br>
+                <button type="button" onclick="postDiscussion()">Post</button>
+            </form>
+            <div id="response"></div><br>
+            <button type="button" onclick="showDiscussions()">Show All Discussions</button>
+            <button type="button" onclick="clearDiscussions()">Clear Discussions</button>
+            <div id="discussionsContainer"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
